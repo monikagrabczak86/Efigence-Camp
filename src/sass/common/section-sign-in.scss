@@ -1,0 +1,146 @@
+.sign-in-page {
+    height: 750px;
+    background: url(../../img/background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $dark-background-font-color;
+}
+
+.sign-in-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 34% 31% 35%;
+    grid-template-rows: 26% 55% 19%;
+    justify-content: center;
+}
+
+.sign-in-4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.logo {
+    background: url(../../img/efi3-login.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 160px;
+    width: 160px;
+    margin-right: 22px;
+}
+
+.sign-in-5 {
+    border-radius: $sign-in-section-border-radius;
+    background-color: $app-items-color;
+}
+
+.sign-in-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.login-header {
+    font-size: 40px;
+}
+
+.instruction-for-client {
+    font-size: 15px;
+}
+
+fieldset {
+    display: block;
+    border: thin solid $dark-background-font-color;
+    border-radius: $sign-in-section-border-radius;
+    width: 90%;
+    padding: 10px 0 10px 0;
+}
+
+legend,
+.circle {
+    display: block;
+    width: 94px;
+    margin: 0;
+    padding: 0;
+}
+
+.circle {
+    height: 94px;
+    background-color: $dark-background-font-color;
+    border-radius: 50%;
+}
+
+.client-number, .input-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-number-value {
+    margin: 0;
+}
+
+.close-btn {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 0 0 10px;
+    display: none;
+}
+
+.close-btn:after {
+    display: inline-block;
+    content: "\00d7";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+}
+
+.sign-in-input {
+    width: 75%;
+    height: 35px;
+    border-radius: $sign-in-section-border-radius;
+}
+
+.virtual-keyboard-hook i {
+    margin-left: 10px;
+}
+
+#password, #password-keyboard, #client-number-go-2 {
+    display: none;
+}
+
+.client-number-select-other {
+    background-color: transparent;
+    color: $dark-background-font-color;
+    opacity: 0.8;
+    display: none;
+}
+
+.client-number-go {
+    margin-top: 20px;
+    margin-bottom: 10%;
+    width: 118px;
+    height: 31px;
+    background-color: $dark-background-font-color;
+    border-radius: $sign-in-section-border-radius;
+}
+
+.sign-in-8 {
+    display: flex;
+    flex-direction: row;
+}
+
+.links {
+    margin: 10px 20px 0 0;
+    font-size: 11px;
+    color: $dark-background-font-color;
+}

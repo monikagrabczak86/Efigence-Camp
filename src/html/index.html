@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/virtual-keyboard-plugin@1.1.1/dist/virtual-keyboard.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+    <section class="sign-in-page">
+        <div class="sign-in-container">
+            <div class="sign-in-1"></div>
+            <div class="sign-in-2"></div>
+            <div class="sign-in-3"></div>
+            <div class="sign-in-4">
+                <div class="logo"></div>
+            </div>
+            <div class="sign-in-5">
+                <form class="sign-in-form">
+                    <div>
+                        <h1 class="login-header">Login</h1>
+                        <h2 class="instruction-for-client" id="instruction-for-client">Podaj numer klienta:</h2>
+                    </div>
+                    <fieldset>
+                        <legend><span class="circle"></span></legend>
+                        <div class="client-number">
+                            <p class="client-number-value" id="client-number-value"></p>
+                            <button type="button" class="close-btn" id="client-number-close" aria-label="close">
+                    </button>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="text" class="sign-in-input" id="client-number" virtual-keyboard>
+                            <input type="password" id="password" class="sign-in-input">
+                            <div id="client-number-keyboard" class="virtual-keyboard-hook" data-target-id="client-number" data-keyboard-mapping="azerty"><i class="fa fa-keyboard-o" aria-hidden="true"></i></div>
+                            <div class="virtual-keyboard-hook" id="password-keyboard" data-target-id="password" data-keyboard-mapping="azerty"><i class="fa fa-keyboard-o" aria-hidden="true"></i></div>
+                        </div>
+                        <button type="button" class="client-number-select-other" id="client-number-select-other">SELECT OTHER</button>
+                        <button type="button" class="client-number-go" id="client-number-go" aria-label="go">GO</button>
+                        <button type="button" class="client-number-go" id="client-number-go-2" aria-label="go">GO</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="sign-in-6"></div>
+            <div class="sign-in-7"></div>
+            <div class="sign-in-8">
+                <a href="#" class="links">SECURITY</a>
+                <a href="#" class="links">LOGGIN IN</a>
+                <a href="#" class="links">CONTACT</a>
+            </div>
+            <div class="sign-in-9"></div>
+        </div>
+
+    </section>
+    <script src="https://unpkg.com/virtual-keyboard-plugin@1.1.1/dist/virtual-keyboard.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
