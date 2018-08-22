@@ -5,7 +5,17 @@
     const buttonX = document.querySelector("#client-number-close");
     const buttonSelectOther = document.querySelector("#client-number-select-other");
 
-    buttonGo.addEventListener("click", next);
+    buttonGo.addEventListener('click', function(event) {
+        event.preventDefault();
+        var textBox = document.getElementById('client-number');
+
+        if (textBox.value === "") {
+            alert('Wprowadź numer klienta');
+        } else {
+            next();
+        }
+    });
+
     buttonX.addEventListener("click", back);
     buttonSelectOther.addEventListener("click", back);
 
@@ -49,29 +59,81 @@
         buttonGo.style.display = "inline-block";
     };
 
-    function login() {
-        const xhttp = new XMLHttpRequest();
-        const clientNumber = document.querySelector("#client-number").value;
-        const password = document.querySelector('#password').value;
+    buttonGoTwo.addEventListener('click', function (event) {
+        event.preventDefault();
+        var textBox = document.getElementById('password');
 
-        xhttp.onreadystatechange = function () {
+        if (textBox.value === "") {
+            alert('Wprowadź hasło');
+        } else {
+            login()
+        }
 
-            if (xhttp.status == false) {
-                if (xhttp.code = "l1") {
-                    alert("No login/password")
-                } 
-                else if (xhttp.code = "l2") {
-                    alert("Wrong login/password")
-                };
+        //-----AJAX METHOD-------
+
+        //        function login() {
+        //        const xhttp = new XMLHttpRequest();
+        //        const clientNumber = document.querySelector("#client-number").value;
+        //        const password = document.querySelector('#password').value;
+        //        
+        //        const data = {
+        //  login: clientNumber,
+        //  password: password
+        //}
+        //
+        //        xhttp.onreadystatechange = function () {
+        //
+        //            if (xhttp.status == 400) {
+        //                alert('Podane dane są nieprwidłowe')
+        //            }
+        //            
+        //            else if (xhttp.status == 200) {
+        //                window.location.href = 'http://localhost:3000/dashboard.html'
+        //            };
+        //        };
+        //
+        //        xhttp.open('POST', 'https://efigence-camp.herokuapp.com/api/login', true);
+        //        xhttp.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+        //
+        //        xhttp.send(Qs.stringify(data));
+        //        
+        //    }
+
+        //------AXIOS SHORT METHOD
+        //                    axios.post('https://efigence-camp.herokuapp.com/api/login', {
+        //                        login: 'efi',
+        //                        password: 'camp'
+        //                    }).then(function (response) {
+        //                         alert('Podane dane są nieprwidłowe');
+        //                    }).catch(function (error) {
+        //                        window.location.href = 'http://localhost:3000/dashboard.html';
+        //                    })
+
+        function login() {
+            const clientNumber = document.querySelector("#client-number").value;
+            const password = document.querySelector('#password').value;
+
+            const formData = new FormData();
+            formData.append('login', clientNumber);
+            formData.append('password', password);
+
+            const options = {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/x-www-form-urlencoded'
+                },
+                data: formData,
+                url: "https://efigence-camp.herokuapp.com/api/login",
             };
-        };
 
-        xhttp.open('POST', 'https://efigence-camp.herokuapp.com/api/login', true);
-        xhttp.send(clientNumber, password);
-        
-        console.log(clientNumber, password);
-    }
+            axios(options).then(function (response) {
+                window.location.href = 'http://localhost:3000/dashboard.html';
+            }).catch(function (error) {
+                alert('Podane dane są nieprwidłowe');
+            })
 
-    buttonGoTwo.addEventListener("click", login);
+        }
+
+    });
 
 })();

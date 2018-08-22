@@ -32,14 +32,16 @@
                     </button>
                         </div>
                         <div class="input-wrapper">
-                            <input type="text" class="sign-in-input" id="client-number" virtual-keyboard>
+                            <input type="text" class="sign-in-input" id="client-number" virtual-keyboard autofocus>
                             <input type="password" id="password" class="sign-in-input">
                             <div id="client-number-keyboard" class="virtual-keyboard-hook" data-target-id="client-number" data-keyboard-mapping="azerty"><i class="fa fa-keyboard-o" aria-hidden="true"></i></div>
                             <div class="virtual-keyboard-hook" id="password-keyboard" data-target-id="password" data-keyboard-mapping="azerty"><i class="fa fa-keyboard-o" aria-hidden="true"></i></div>
                         </div>
+                        
+                        
                         <button type="button" class="client-number-select-other" id="client-number-select-other">SELECT OTHER</button>
-                        <button type="button" class="client-number-go" id="client-number-go" aria-label="go">GO</button>
-                        <button type="button" class="client-number-go" id="client-number-go-2" aria-label="go">GO</button>
+                        <input type="submit" value="GO" class="client-number-go" id="client-number-go">
+                        <input type="submit" value="GO" class="client-number-go" id="client-number-go-2">
                     </fieldset>
                 </form>
             </div>
@@ -53,8 +55,9 @@
             <div class="sign-in-9"></div>
         </div>
 
-    </section>
+    </section> 
     <script src="https://unpkg.com/virtual-keyboard-plugin@1.1.1/dist/virtual-keyboard.min.js"></script>
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

@@ -132,6 +132,11 @@ legend,
     height: 31px;
     background-color: $dark-background-font-color;
     border-radius: $sign-in-section-border-radius;
+    cursor: pointer;
+}
+
+.fa-keyboard-o {
+    cursor: pointer;
 }
 
 .sign-in-8 {

@@ -1,0 +1,25 @@
+.navigation {
+    background-color: $app-items-color;
+    color: $dark-background-font-color;
+    height: 67px;
+}
+
+.navigation-bar {
+    height: 100%;
+}
+
+.hamburger {
+    background-color: blue;
+}
+
+.logo-dashboard {
+   background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.messages {
+    background-color: red;
+
+}
