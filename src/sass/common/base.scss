@@ -14,6 +14,13 @@ button {
     font-weight: lighter;
     font-size: 15px;
     border: none;
+    background-color: $app-items-color;
+    color: $dark-background-font-color;
+    border-radius: 2px;
+}
+
+button:focus {
+    outline: none;
 }
 
 h1, h2 {
@@ -31,4 +38,13 @@ p {
 
 a, a:hover {
     text-decoration: none;
+    color: $dark-background-font-color;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
 }

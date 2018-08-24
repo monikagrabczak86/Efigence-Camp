@@ -1,25 +1,110 @@
-.navigation {
-    background-color: $app-items-color;
+body {
+    height: 2000px;
+}
+.main-panel {
     color: $dark-background-font-color;
-    height: 67px;
+    height: $mobile-navigation-height;   
+    background-color: $app-items-color;
 }
 
-.navigation-bar {
-    height: 100%;
+.hamburger-items {
+    width: 34px;
+    height: 26px;
+    margin: 18px 0 18px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
 }
 
-.hamburger {
-    background-color: blue;
+.hamburger-item {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: $dark-background-font-color;
+    border-radius: 2px;
+    transition: 0.5s ease all;
 }
 
 .logo-dashboard {
-   background-color: pink;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .messages {
-    background-color: red;
-
+    display: flex;
+    justify-content: flex-end;
 }
+
+.btn-message {
+    background-color: transparent;
+    margin: 20px 17px 18px 0;
+}
+ 
+//BURGER ACTIVE CLASS CHANGES - START
+
+.burger-active span.burger-item-top {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+.burger-active span.burger-item-middle {
+    opacity: 0;
+}
+.burger-active span.burger-item-bottom {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.burger-active .main-nav {
+    top: 0;
+}
+
+//BURGER ACTIVE CLASS CHANGES - END
+
+.main-nav {
+    background-color: $light-background-font-color;
+    opacity: 0.8;
+    margin-top: $mobile-navigation-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    top: -500px;
+    transition: top 1s ease;
+    position: fixed;
+}
+
+.menu-item {
+    margin-top: 30px;
+}
+
+.control-panel {
+    margin-top: $mobile-navigation-height;
+    height: 92px;
+}
+
+.items-wrapper {
+    margin: 23px 0 19px 16px;
+}
+
+.wraper-item {
+    font-size: 25px;
+    margin: 0;
+    line-height: 27px;
+}
+
+.control-panel-btn {
+    display: flex;
+    justify-content: flex-end;
+    z-index: -1;
+    
+} 
+
+.add-new-expense {
+    width: 82px;
+    height: 55px;
+    margin: 18px 17px 19px 0;
+    
+}
+
+
+
