@@ -96,15 +96,38 @@ body {
     display: flex;
     justify-content: flex-end;
     z-index: -1;
+    padding: 0;
     
 } 
 
 .add-new-expense {
     width: 82px;
     height: 55px;
-    margin: 18px 17px 19px 0;
-    
+    margin: 18px 17px 19px 0;   
 }
 
+.info-items {
+    padding: 21px 0 0 0;
+    font-size: 15px;
+}
+
+.info-item {
+    height: 54px;
+    background-color: $dark-background-font-color;
+    margin: 0 19px 6px 19px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+}
+
+.item-icon {
+    width: 28px;
+    height: 27px;
+    margin-left: 18px;
+    margin-right: 13px;
+}
+.bank-loans {
+    background-color: $app-items-color;
+}
 
 
